@@ -1,1 +1,2 @@
 # streamletpyvis
+Sample PyVis Application
