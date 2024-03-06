@@ -36,11 +36,14 @@ else:
                        height='400px',
                        width='100%',
                        bgcolor='#222222',
-                       font_color='white'
+                       font_color='white',
+                       cdn_resources="remote",
+                       select_menu=True
                       )
     
     
     # Take Networkx graph and translate it to a PyVis graph format
+    # drug_net.from_nx(G)
     drug_net.from_nx(G)
 
     # Generate network with specific layout settings
