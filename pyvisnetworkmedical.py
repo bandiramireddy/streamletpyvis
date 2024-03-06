@@ -38,7 +38,8 @@ else:
                        bgcolor='#222222',
                        font_color='white'
                       )
-
+    
+    
     # Take Networkx graph and translate it to a PyVis graph format
     drug_net.from_nx(G)
 
@@ -50,7 +51,7 @@ else:
                         spring_strength=0.10,
                         damping=0.95
                        )
-
+    drug_net.show_buttons(filter_=True) 
     # Save and read graph as HTML file (on Streamlit Sharing)
     try:
         path = 'tmp'
@@ -64,9 +65,9 @@ else:
         HtmlFile = open(f'{path}/pyvis_graph.html', 'r', encoding='utf-8')
 
     # Load HTML file in HTML component for display on Streamlit page
-    components.html(HtmlFile.read(), height=435)
+    components.html(HtmlFile.read(), height=800)
 
 # Footer
 st.markdown(
-    """ APP ViVSoft  """, unsafe_allow_html=True
+    """ Test APP  """, unsafe_allow_html=True
     )
